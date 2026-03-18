@@ -1,0 +1,122 @@
+/**
+ * Dolhar o.p. d.o.o. — Sample 5
+ * Scroll-driven hero: full (dark) → slim (light) on scroll
+ */
+
+document.addEventListener('DOMContentLoaded', () => {
+  const root = document.documentElement;
+
+  function setupToggle(selector, attr, storageKey, fallback) {
+    const buttons = document.querySelectorAll(selector);
+
+    function set(value) {
+      root.dataset[attr] = value;
+      buttons.forEach(btn => {
+        btn.classList.toggle('active', btn.dataset[attr] === value);
+      });
+      localStorage.setItem(storageKey, value);
+    }
+
+    buttons.forEach(btn => {
+      btn.addEventListener('click', () => set(btn.dataset[attr]));
+    });
+
+    const saved = localStorage.getItem(storageKey) || fallback;
+    set(saved);
+  }
+
+  setupToggle('.teal-btn', 'teal', 'dolhar6-teal', 'custom');
+  setupToggle('.logocase-btn', 'logocase', 'dolhar6-logocase', 'upper');
+  setupToggle('.bodyfont-btn', 'bodyfont', 'dolhar6-bodyfont', 'sans');
+  setupToggle('.stampfirm-btn', 'stampfirm', 'dolhar6-stampfirm', 'full');
+  setupToggle('.mode-btn', 'mode', 'dolhar6-mode', 'light');
+
+  // Sync stamp wordmarks with logo case toggle
+  function updateStampWordmarks() {
+    const isUpper = root.dataset.logocase === 'upper';
+    document.querySelectorAll('.stamp-wordmark').forEach(el => {
+      const tspan = el.querySelector('tspan');
+      if (tspan) {
+        el.firstChild.textContent = isUpper ? 'DOLHAR' : 'Dolhar';
+      } else {
+        el.textContent = isUpper ? 'DOLHAR' : 'Dolhar';
+      }
+    });
+    // Also refresh round stamp arc text if in short mode
+    if (root.dataset.stampfirm === 'short') updateStampFirm();
+  }
+
+  document.querySelectorAll('.logocase-btn').forEach(btn => {
+    btn.addEventListener('click', updateStampWordmarks);
+  });
+  updateStampWordmarks();
+
+  // Sync round stamp firm name (full / short / horizontal)
+  function updateStampFirm() {
+    const mode = root.dataset.stampfirm || 'full';
+    const isHoriz = mode === 'horiz';
+
+    document.querySelectorAll('.stamp-firm-text').forEach(el => {
+      const tp = el.querySelector('textPath');
+      if (isHoriz) {
+        el.setAttribute('display', 'none');
+      } else {
+        el.removeAttribute('display');
+        if (tp) {
+          if (mode === 'full') {
+            tp.innerHTML = 'ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.';
+          } else {
+            const isUpper = root.dataset.logocase === 'upper';
+            const wm = isUpper ? 'DOLHAR' : 'Dolhar';
+            tp.innerHTML = wm + '<tspan font-family="var(--font-body)" font-size="10" font-weight="400" letter-spacing="0.04em" dx="3">o.p. d.o.o.</tspan>';
+          }
+        }
+        el.setAttribute('font-family', "var(--font-display)");
+        el.setAttribute('font-weight', mode === 'full' ? '400' : '700');
+        el.setAttribute('font-size', mode === 'full' ? '12' : '16');
+        el.setAttribute('letter-spacing', mode === 'full' ? '0.06em' : '0.1em');
+      }
+    });
+
+    document.querySelectorAll('.stamp-firm-horiz').forEach(el => {
+      el.setAttribute('display', isHoriz ? '' : 'none');
+      el.setAttribute('font-family', 'var(--font-display)');
+      el.setAttribute('font-weight', '700');
+    });
+  }
+
+  document.querySelectorAll('.stampfirm-btn').forEach(btn => {
+    btn.addEventListener('click', updateStampFirm);
+  });
+  updateStampFirm();
+
+  // Push content below fixed nav
+  const nav = document.querySelector('.theme-switcher');
+  function syncNavHeight() {
+    if (!nav) return;
+    requestAnimationFrame(() => {
+      const h = nav.offsetHeight;
+      document.body.style.paddingTop = h + 'px';
+      // Position slim hero right below nav
+      if (heroSlim) heroSlim.style.top = h + 'px';
+    });
+  }
+
+  const heroFull = document.querySelector('.hero-full');
+  const heroSlim = document.querySelector('.hero-slim');
+
+  syncNavHeight();
+  window.addEventListener('resize', syncNavHeight);
+
+  // Scroll-driven hero: when hero-full leaves viewport → show slim
+  if (heroFull && heroSlim) {
+    const observer = new IntersectionObserver((entries) => {
+      heroSlim.classList.toggle('visible', !entries[0].isIntersecting);
+    }, {
+      threshold: 0,
+      rootMargin: `-${nav ? nav.offsetHeight : 0}px 0px 0px 0px`
+    });
+
+    observer.observe(heroFull);
+  }
+});
