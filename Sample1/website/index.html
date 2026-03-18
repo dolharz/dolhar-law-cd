@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="sl" data-theme="classic" data-teal="custom" data-mode="light" data-typo="auto" data-logocase="upper">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dolhar — Celostna grafična podoba</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=DM+Sans:ital,wght@0,300;0,400;0,500;0,700;1,400&family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Inter:wght@300;400;500;600;700&family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/tokens.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- Theme Switcher -->
+  <nav class="theme-switcher">
+    <span>Slog:</span>
+    <button class="theme-btn active" data-theme="classic">A — Klasičen</button>
+    <button class="theme-btn" data-theme="classic-teal">A — Klasičen Teal</button>
+    <button class="theme-btn" data-theme="modern">B — Moderen</button>
+    <button class="theme-btn" data-theme="modern-teal">B — Moderen Teal</button>
+    <button class="theme-btn" data-theme="elegant">C — Eleganten</button>
+    <button class="theme-btn" data-theme="elegant-teal">C — Eleganten Teal</button>
+    <span class="switcher-divider"></span>
+    <span>Teal:</span>
+    <button class="teal-btn active" data-teal="custom">Lastna</button>
+    <button class="teal-btn" data-teal="designer">Oblikovalčeva</button>
+    <span class="switcher-divider"></span>
+    <span>Tipografija:</span>
+    <button class="typo-btn active" data-typo="auto">Iz teme</button>
+    <button class="typo-btn" data-typo="playfair">Playfair</button>
+    <button class="typo-btn" data-typo="cormorant">Cormorant</button>
+    <button class="typo-btn" data-typo="dmsans">DM Sans</button>
+    <button class="typo-btn" data-typo="ebgaramond">EB Garamond</button>
+    <button class="typo-btn" data-typo="lora">Lora</button>
+    <span class="switcher-divider"></span>
+    <span>Logotip:</span>
+    <button class="logocase-btn active" data-logocase="upper">DOLHAR</button>
+    <button class="logocase-btn" data-logocase="sentence">Dolhar</button>
+    <span class="switcher-divider"></span>
+    <span>Način:</span>
+    <button class="mode-btn active" data-mode="light">Light</button>
+    <button class="mode-btn" data-mode="dark">Dark</button>
+  </nav>
+
+  <div class="page">
+
+    <!-- ======================== HERO ======================== -->
+    <div class="hero">
+      <div class="logo-lockup hero-logo">
+        <div class="logo-wordmark-area">
+          <div class="wordmark">Dolhar</div>
+        </div>
+        <div class="logo-icon-area">
+          <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" fill="#0CA69E"/>
+            <rect x="17" y="17" width="66" height="66" fill="var(--color-accent)"/>
+            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+            <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+          </svg>
+        </div>
+      </div>
+      <div class="divider"></div>
+      <div class="firm-type">Odvetniška družba</div>
+    </div>
+
+
+    <!-- ======================== BARVNA PALETA ======================== -->
+    <section id="barve">
+      <h2 class="section-title">Barvna paleta</h2>
+      <p class="section-subtitle">Primarne in sekundarne barve</p>
+
+      <div class="color-grid">
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: var(--color-primary);">
+            <span style="color: #fff;">Primary</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Primarna</div>
+            <div class="swatch-var">--color-primary</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: var(--color-primary-light);">
+            <span style="color: #fff;">Primary Light</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Primarna svetla</div>
+            <div class="swatch-var">--color-primary-light</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: var(--color-accent);">
+            <span style="color: #fff;">Accent</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Poudarek</div>
+            <div class="swatch-var">--color-accent</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: var(--color-accent-muted);">
+            <span style="color: #fff;">Accent Muted</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Poudarek umirjen</div>
+            <div class="swatch-var">--color-accent-muted</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: var(--color-cream);">
+            <span style="color: #666;">Cream</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Kremna</div>
+            <div class="swatch-var">--color-cream</div>
+          </div>
+        </div>
+
+        <div class="color-swatch">
+          <div class="swatch-color" style="background: var(--color-dark-gray);">
+            <span style="color: #fff;">Dark Gray</span>
+          </div>
+          <div class="swatch-info">
+            <div class="swatch-name">Temno siva</div>
+            <div class="swatch-var">--color-dark-gray</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================== TIPOGRAFIJA ======================== -->
+    <section id="tipografija">
+      <h2 class="section-title">Tipografija</h2>
+      <p class="section-subtitle">Pisave in hierarhija besedila</p>
+
+      <div class="type-specimen">
+        <div class="type-label">Display — Logotip & naslovi</div>
+        <div class="type-sample-display logo-case">Dolhar</div>
+        <div class="type-sample-display" style="font-size: var(--text-3xl); text-transform: none;">Odvetniška družba Dolhar</div>
+        <div class="type-meta">font-family: var(--font-display) · letter-spacing: var(--logo-letter-spacing)</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Heading — Podnaslovi & poudarki</div>
+        <div class="type-sample-heading">Pravno svetovanje z osebnim pristopom</div>
+        <div class="type-sample-heading" style="font-style: italic; font-size: var(--text-xl);">Gospodarsko pravo · Civilno pravo · Delovno pravo</div>
+        <div class="type-meta">font-family: var(--font-heading)</div>
+      </div>
+
+      <div class="type-specimen">
+        <div class="type-label">Body — Tekoče besedilo</div>
+        <div class="type-sample-body">
+          Odvetniška družba Dolhar o.p. d.o.o. je odvetniška pisarna s sedežem v Ljubljani,
+          ki nudi celostno pravno svetovanje pravnim in fizičnim osebam. Naša pisarna združuje
+          strokovno znanje in osebni pristop pri reševanju najzahtevnejših pravnih izzivov.
+        </div>
+        <div class="type-meta">font-family: var(--font-body) · line-height: 1.6</div>
+      </div>
+    </section>
+
+
+    <!-- ======================== VIZITKA ======================== -->
+    <section id="vizitka">
+      <h2 class="section-title">Vizitka</h2>
+      <p class="section-subtitle">Poslovna vizitka — sprednja in zadnja stran</p>
+
+      <div class="card-container">
+        <div class="business-card front">
+          <div class="card-logo-row">
+            <div class="card-firm">Dolhar</div>
+            <svg class="card-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#0CA69E"/>
+              <rect x="17" y="17" width="66" height="66" fill="var(--color-accent)"/>
+              <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+              <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+            </svg>
+          </div>
+          <div class="card-type">Odvetniška družba</div>
+          <div class="card-name">Žiga Dolhar</div>
+          <div class="card-title">Odvetnik</div>
+        </div>
+
+        <div class="business-card back">
+          <div class="card-detail">
+            <strong>Odvetniška družba Dolhar o.p. d.o.o.</strong><br>
+            Gosposvetska cesta 11<br>
+            1000 Ljubljana, Slovenija<br><br>
+            T +386 (0)1 000 00 00<br>
+            E info@dolhar.si<br>
+            W www.dolhar.si
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================== DOPISNI LIST ======================== -->
+    <section id="dopisni-list">
+      <h2 class="section-title">Dopisni list</h2>
+      <p class="section-subtitle">Letterhead — vzorec dopisa</p>
+
+      <div class="letterhead-mock">
+        <div class="lh-header">
+          <div class="lh-logo-row">
+            <div>
+              <div class="lh-firm">Dolhar</div>
+              <div class="lh-firm-sub">Odvetniška družba</div>
+            </div>
+            <svg class="lh-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#0CA69E"/>
+              <rect x="17" y="17" width="66" height="66" fill="var(--color-accent)"/>
+              <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+              <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+            </svg>
+          </div>
+          <div class="lh-contact">
+            Gosposvetska cesta 11<br>
+            1000 Ljubljana<br>
+            T +386 (0)1 000 00 00<br>
+            info@dolhar.si
+          </div>
+        </div>
+
+        <div class="lh-body">
+          <div class="lh-date">Ljubljana, 14. marca 2026</div>
+
+          <div class="lh-recipient">
+            Okrožno sodišče v Ljubljani<br>
+            Tavčarjeva ulica 9<br>
+            1000 Ljubljana
+          </div>
+
+          <div class="lh-subject">Zadeva: Vzorec dopisnega lista</div>
+
+          <p>Spoštovani,</p>
+
+          <p>
+            to je vzorec dopisnega lista Odvetniške družbe Dolhar o.p. d.o.o.,
+            ki prikazuje uporabo elementov celostne grafične podobe pri uradni
+            korespondenci.
+          </p>
+
+          <p>
+            Dopisni list vključuje glavo s firmo in kontaktnimi podatki,
+            nogo s korporativnimi podatki ter enotno tipografijo v skladu
+            s smernicami CGP.
+          </p>
+
+          <p>S spoštovanjem,</p>
+          <p style="margin-top: 2rem;">
+            <strong>Žiga Dolhar</strong><br>
+            <span style="font-size: 0.8rem; color: var(--color-mid-gray);">Odvetnik</span>
+          </p>
+        </div>
+
+        <div class="lh-motto">
+          Big firm expertise, responsiveness of a trusted advisor.
+        </div>
+
+        <div class="lh-footer">
+          <div>
+            Odvetniška družba Dolhar o.p. d.o.o.<br>
+            Gosposvetska cesta 11, 1000 Ljubljana
+          </div>
+          <div>
+            Mat. št.: 7401221000<br>
+            ID za DDV: SI 52006581
+          </div>
+          <div>
+            TRR: SI56 .... .... .... ...<br>
+            www.dolhar.si
+          </div>
+          <div class="lh-chambers">
+            <img src="assets/images/Chambers-2025.png" alt="Chambers Ranked in Europe 2025" class="chambers-badge">
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================== SODNA VLOGA ======================== -->
+    <section id="sodna-vloga">
+      <h2 class="section-title">Sodna vloga</h2>
+      <p class="section-subtitle">Vzorec strukture sodne vloge — po straneh</p>
+
+      <div class="cf-pages">
+
+        <!-- ——— 1. STRAN ——— -->
+        <div class="cf-page-label">1. stran</div>
+        <div class="court-filing-mock">
+          <!-- Glava: tabela sodišče ↔ odvetnik -->
+          <table class="cf-header-table">
+            <tr>
+              <td class="cf-court-cell">
+                <strong>Okrajno sodišče v Ljubljani</strong><br>
+                Izvršilni oddelek<br>
+                Miklošičeva 10<br>
+                1000 Ljubljana
+              </td>
+              <td class="cf-attorney-cell">
+                <div class="cf-attorney-logo">
+                  <div>
+                    <div class="cf-firm">Odvetniška družba Dolhar</div>
+                    <div class="cf-firm-detail">o.p. d.o.o.</div>
+                  </div>
+                  <svg class="cf-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                    <rect width="100" height="100" fill="var(--color-accent)"/>
+                    <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+                    <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+                  </svg>
+                </div>
+                Gosposvetska c. 11<br>
+                SI-1000 Ljubljana<br>
+                <span class="cf-small">
+                  dolhar.si · info@dolhar.si<br>
+                  +386 41 505 240<br>
+                  mat. št.: 7401221000<br>
+                  ID za DDV: SI 52006581
+                </span>
+              </td>
+            </tr>
+            <tr>
+              <td class="cf-date-cell" colspan="2" style="text-align: right;">Ljubljana, 14. 3. 2026</td>
+            </tr>
+          </table>
+
+          <!-- Podatki o zadevi -->
+          <table class="cf-case-table">
+            <tr>
+              <td class="cf-label">Opravilna številka:</td>
+              <td>I 2773/2025</td>
+            </tr>
+            <tr><td colspan="2" style="height: 0.5rem;"></td></tr>
+            <tr>
+              <td class="cf-label">Tožeča stranka:</td>
+              <td>
+                <strong>ABC d.o.o.</strong><br>
+                Slovenska cesta 1, 1000 Ljubljana<br>
+                <span class="cf-small">ki jo zastopa: Odvetniška družba Dolhar o.p. d.o.o., Gosposvetska c. 11, 1000 Ljubljana</span>
+              </td>
+            </tr>
+            <tr>
+              <td class="cf-label">Tožena stranka:</td>
+              <td>
+                <strong>XYZ d.o.o.</strong><br>
+                Dunajska cesta 2, 1000 Ljubljana
+              </td>
+            </tr>
+            <tr><td colspan="2" style="height: 0.5rem;"></td></tr>
+            <tr>
+              <td class="cf-label">Zaradi:</td>
+              <td>plačila 15.000,00 EUR</td>
+            </tr>
+          </table>
+
+          <!-- Naslov vloge -->
+          <div class="cf-filing-title">
+            Tožba<br>
+            <span class="cf-filing-copies">1× sodišču (elektronsko)<br>1× priloge (3)<br>pooblastilo – v spis</span>
+          </div>
+
+          <!-- Začetek vsebine -->
+          <div class="cf-body">
+            <div class="cf-h1">I. Dejansko stanje</div>
+            <p class="cf-l1">
+              Tožeča stranka po svojem pooblaščencu vlaga to tožbo ter sodišču predlaga,
+              da po izvedenem postopku izda naslednjo
+            </p>
+            <p style="text-align: center; font-family: var(--font-heading); font-size: 1.05rem; color: var(--color-primary); margin: 1.5rem 0;">
+              S O D B O
+            </p>
+            <p class="cf-l1">
+              Tožena stranka je dolžna tožeči stranki plačati znesek 15.000,00 EUR z zakonskimi
+              zamudnimi obrestmi od 1. 1. 2026 dalje do plačila, v roku 15 dni, pod izvršbo.
+            </p>
+          </div>
+
+          <div class="cf-page-number">1/4</div>
+        </div>
+
+        <!-- ——— 2. STRAN ——— -->
+        <div class="cf-page-label">2. stran</div>
+        <div class="court-filing-mock cf-continuation">
+          <div class="cf-continuation-header">
+            <span>Opr. št. I 2773/2025</span>
+            <span>Odvetniška družba Dolhar o.p. d.o.o.</span>
+          </div>
+
+          <div class="cf-body">
+            <div class="cf-h1">II. Obrazložitev</div>
+            <div class="cf-h3">K zahtevku</div>
+            <p class="cf-l1">
+              Med pravdnima strankama je bila dne 15. 6. 2025 sklenjena pogodba o opravljanju
+              storitev, na podlagi katere se je tožena stranka zavezala plačati dogovorjeno ceno.
+            </p>
+            <p class="cf-l2">
+              Tožeča stranka je storitve v celoti opravila in toženi stranki izdala račun
+              št. 2025-0042 z dne 1. 12. 2025 z rokom plačila 30 dni.
+            </p>
+            <p class="cf-l2">
+              Tožena stranka računa ni poravnala niti po pisnem opominu z dne 15. 1. 2026.
+            </p>
+
+            <div class="cf-h3">K podlagi zahtevka</div>
+            <p class="cf-l1">
+              Na podlagi drugega odstavka 9. člena Obligacijskega zakonika (OZ) je dolžnik v zamudi,
+              če ne izpolni obveznosti v roku, določenem za izpolnitev. Skladno s prvim odstavkom
+              378. člena OZ dolguje upniku od nastanka zamude dalje zamudne obresti po obrestni meri,
+              ki jo določa zakon.
+            </p>
+            <p class="cf-l1">
+              Ker tožena stranka svoje obveznosti ni izpolnila niti po pisnem opominu, tožeča stranka
+              vlaga pričujočo tožbo.
+            </p>
+
+            <!-- Dokazni predlog -->
+            <div class="cf-evidence-title">Dokaz</div>
+            <div class="cf-evidence-item">[1] Pogodba o opravljanju storitev z 15. 6. 2025</div>
+            <div class="cf-evidence-item">[2] Račun št. 2025-0042 z 1. 12. 2025</div>
+            <div class="cf-evidence-item">[3] Opomin z 15. 1. 2026</div>
+            <div class="cf-evidence-item">[4] Potrdilo o vročitvi opomina</div>
+          </div>
+
+          <div class="cf-page-number">2/4</div>
+        </div>
+
+        <!-- ——— ZADNJA STRAN ——— -->
+        <div class="cf-page-label">Zadnja stran</div>
+        <div class="court-filing-mock cf-continuation">
+          <div class="cf-continuation-header">
+            <span>Opr. št. I 2773/2025</span>
+            <span>Odvetniška družba Dolhar o.p. d.o.o.</span>
+          </div>
+
+          <div class="cf-body">
+            <p class="cf-l1">
+              Glede na navedeno tožeča stranka sodišču predlaga, da odloči kot izhaja iz tožbenega
+              predloga.
+            </p>
+          </div>
+
+          <!-- Podpis -->
+          <div class="cf-signature">
+            ABC d.o.o.<br>
+            <span class="cf-small">zanj: Žiga Dolhar, odvetnik</span>
+          </div>
+
+          <!-- Stroškovnik -->
+          <div class="cf-costs-title">Stroškovnik</div>
+          <table class="cf-costs-table">
+            <thead>
+              <tr>
+                <th></th>
+                <th>Tar. št.</th>
+                <th>Točke</th>
+                <th>Znesek (EUR)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Tožba</td>
+                <td>18/1</td>
+                <td>600</td>
+                <td>360,00</td>
+              </tr>
+              <tr>
+                <td>Stroški</td>
+                <td>11. člen</td>
+                <td>20</td>
+                <td>12,00</td>
+              </tr>
+              <tr>
+                <td>22 % DDV</td>
+                <td></td>
+                <td></td>
+                <td>81,84</td>
+              </tr>
+              <tr class="cf-costs-total">
+                <td>Skupaj</td>
+                <td></td>
+                <td></td>
+                <td>453,84</td>
+              </tr>
+              <tr>
+                <td colspan="3">Sodne takse</td>
+                <td>po odmeri sodišča</td>
+              </tr>
+            </tbody>
+          </table>
+
+          <div class="cf-page-number">4/4</div>
+        </div>
+
+      </div>
+    </section>
+
+
+    <!-- ======================== ŽIG / ŠTAMPILJKA ======================== -->
+    <section id="zig">
+      <h2 class="section-title">Žig (štampiljka)</h2>
+      <p class="section-subtitle">Uradni žig odvetniške družbe</p>
+
+      <!-- Črnobela tehnika -->
+      <h3 class="stamp-group-title">Črnobela tehnika</h3>
+      <div class="stamp-container">
+        <div class="stamp-card">
+          <div class="type-label">Okrogla oblika</div>
+          <div class="stamp stamp-round">
+            <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" class="stamp-svg">
+              <circle cx="120" cy="120" r="114" fill="none" stroke="#000" stroke-width="3"/>
+              <circle cx="120" cy="120" r="105" fill="none" stroke="#000" stroke-width="1.5"/>
+              <defs>
+                <path id="topArcBW" d="M 30,120 a 90,90 0 1,1 180,0" fill="none"/>
+                <path id="bottomArcBW" d="M 210,120 a 90,90 0 1,1 -180,0" fill="none"/>
+              </defs>
+              <text font-family="var(--font-body)" font-size="11" fill="#000" letter-spacing="0.1em">
+                <textPath href="#topArcBW" startOffset="50%" text-anchor="middle">ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.</textPath>
+              </text>
+              <text font-family="var(--font-body)" font-size="9.5" fill="#000" letter-spacing="0.05em">
+                <textPath href="#bottomArcBW" startOffset="50%" text-anchor="middle">GOSPOSVETSKA CESTA 11 · 1000 LJUBLJANA</textPath>
+              </text>
+              <rect x="95" y="95" width="50" height="50" fill="#333"/>
+              <rect x="102.5" y="102.5" width="35" height="35" fill="none" stroke="#fff" stroke-width="1.5"/>
+              <rect x="111.5" y="111.5" width="17" height="17" fill="#000"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="stamp-card">
+          <div class="type-label">Pravokotna oblika</div>
+          <div class="stamp stamp-rect">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg" class="stamp-svg">
+              <rect x="3" y="3" width="294" height="134" fill="none" stroke="#000" stroke-width="2.5"/>
+              <rect x="8" y="8" width="284" height="124" fill="none" stroke="#000" stroke-width="0.8"/>
+              <rect x="20" y="38" width="44" height="44" fill="#333"/>
+              <rect x="26.5" y="44.5" width="31" height="31" fill="none" stroke="#fff" stroke-width="1.5"/>
+              <rect x="34" y="52" width="16" height="16" fill="#000"/>
+              <text x="78" y="52" font-family="var(--font-display)" font-size="20" font-weight="700" fill="#000" letter-spacing="0.15em">DOLHAR</text>
+              <text x="78" y="68" font-family="var(--font-body)" font-size="8.5" fill="#000" letter-spacing="0.08em">Odvetniška družba Dolhar o.p. d.o.o.</text>
+              <line x1="78" y1="76" x2="280" y2="76" stroke="#000" stroke-width="0.8"/>
+              <text x="78" y="88" font-family="var(--font-body)" font-size="7.5" fill="#555">Gosposvetska cesta 11, 1000 Ljubljana</text>
+              <text x="78" y="100" font-family="var(--font-body)" font-size="7.5" fill="#555">Mat. št.: 7401221000 · ID za DDV: SI 52006581</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Teal tehnika -->
+      <h3 class="stamp-group-title">Teal tehnika</h3>
+      <div class="stamp-container">
+        <div class="stamp-card">
+          <div class="type-label">Okrogla oblika</div>
+          <div class="stamp stamp-round">
+            <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" class="stamp-svg">
+              <circle cx="120" cy="120" r="114" fill="none" stroke="var(--color-accent)" stroke-width="3"/>
+              <circle cx="120" cy="120" r="105" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
+              <defs>
+                <path id="topArcT" d="M 30,120 a 90,90 0 1,1 180,0" fill="none"/>
+                <path id="bottomArcT" d="M 210,120 a 90,90 0 1,1 -180,0" fill="none"/>
+              </defs>
+              <text font-family="var(--font-body)" font-size="11" fill="var(--color-accent)" letter-spacing="0.1em">
+                <textPath href="#topArcT" startOffset="50%" text-anchor="middle">ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.</textPath>
+              </text>
+              <text font-family="var(--font-body)" font-size="9.5" fill="var(--color-accent)" letter-spacing="0.05em">
+                <textPath href="#bottomArcT" startOffset="50%" text-anchor="middle">GOSPOSVETSKA CESTA 11 · 1000 LJUBLJANA</textPath>
+              </text>
+              <rect x="95" y="95" width="50" height="50" fill="#0CA69E"/>
+              <rect x="104" y="104" width="32" height="32" fill="var(--color-accent)"/>
+              <rect x="102.5" y="102.5" width="35" height="35" fill="none" stroke="#fff" stroke-width="1.5"/>
+              <rect x="111.5" y="111.5" width="17" height="17" fill="var(--color-primary)"/>
+            </svg>
+          </div>
+        </div>
+
+        <div class="stamp-card">
+          <div class="type-label">Pravokotna oblika</div>
+          <div class="stamp stamp-rect">
+            <svg viewBox="0 0 300 140" xmlns="http://www.w3.org/2000/svg" class="stamp-svg">
+              <rect x="3" y="3" width="294" height="134" fill="none" stroke="var(--color-accent)" stroke-width="2.5"/>
+              <rect x="8" y="8" width="284" height="124" fill="none" stroke="var(--color-accent)" stroke-width="0.8"/>
+              <rect x="20" y="38" width="44" height="44" fill="#0CA69E"/>
+              <rect x="28" y="46" width="28" height="28" fill="var(--color-accent)"/>
+              <rect x="26.5" y="44.5" width="31" height="31" fill="none" stroke="#fff" stroke-width="1.5"/>
+              <rect x="34" y="52" width="16" height="16" fill="var(--color-primary)"/>
+              <text x="78" y="52" font-family="var(--font-display)" font-size="20" font-weight="700" fill="var(--color-accent)" letter-spacing="0.15em">DOLHAR</text>
+              <text x="78" y="68" font-family="var(--font-body)" font-size="8.5" fill="var(--color-accent)" letter-spacing="0.08em">Odvetniška družba Dolhar o.p. d.o.o.</text>
+              <line x1="78" y1="76" x2="280" y2="76" stroke="var(--color-accent)" stroke-width="0.8"/>
+              <text x="78" y="88" font-family="var(--font-body)" font-size="7.5" fill="var(--color-accent-muted)">Gosposvetska cesta 11, 1000 Ljubljana</text>
+              <text x="78" y="100" font-family="var(--font-body)" font-size="7.5" fill="var(--color-accent-muted)">Mat. št.: 7401221000 · ID za DDV: SI 52006581</text>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================== E-MAIL PODPIS ======================== -->
+    <section id="email-podpis">
+      <h2 class="section-title">E-mail podpis</h2>
+      <p class="section-subtitle">Standardni e-mail podpis</p>
+
+      <div class="email-sig-container">
+        <div class="email-sig">
+          <div class="sig-logo-row">
+            <svg class="sig-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+              <rect width="100" height="100" fill="#0CA69E"/>
+              <rect x="17" y="17" width="66" height="66" fill="var(--color-accent)"/>
+              <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+              <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+            </svg>
+            <div>
+              <div class="sig-firm" style="color: var(--color-primary);">Dolhar</div>
+              <div class="sig-firm-sub" style="color: var(--color-mid-gray);">Odvetniška družba</div>
+            </div>
+          </div>
+          <div class="sig-divider" style="background: var(--color-accent);"></div>
+          <div class="sig-name" style="color: var(--color-primary);">Žiga Dolhar</div>
+          <div class="sig-title" style="color: var(--color-accent);">Odvetnik</div>
+          <div class="sig-motto" style="color: var(--color-accent); font-style: italic; font-size: 11px; margin-bottom: 8px;">
+            Big firm expertise, responsiveness of a trusted advisor.
+          </div>
+          <div class="sig-details" style="color: #666;">
+            Gosposvetska cesta 11, 1000 Ljubljana<br>
+            T: +386 (0)1 000 00 00 · M: +386 (0)40 000 000<br>
+            E: ziga.dolhar@dolhar.si · W: www.dolhar.si
+          </div>
+          <div class="sig-chambers">
+            <img src="assets/images/Chambers-2025.png" alt="Chambers Ranked in Europe 2025" class="chambers-badge-sig">
+          </div>
+          <div class="sig-legal" style="color: #999;">
+            Odvetniška družba Dolhar o.p. d.o.o. · Mat. št.: 7401221000 · ID za DDV: SI 52006581<br>
+            To elektronsko sporočilo in njegove priloge so zaupne narave in namenjene izključno naslovniku.
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- ======================== LOGOTIP VARIANTE ======================== -->
+    <section id="logotip">
+      <h2 class="section-title">Logotip</h2>
+      <p class="section-subtitle">Wordmark + ikona — variante za različne kontekste</p>
+
+      <div class="grid-2">
+        <!-- Full lockup light bg -->
+        <div class="type-specimen" style="padding: 3rem;">
+          <div class="type-label">Celoten logotip — svetla podlaga</div>
+          <div class="logo-lockup logo-variant">
+            <div class="logo-wordmark-area" style="background: var(--color-primary);">
+              <div class="wordmark" style="color: var(--color-accent);">Dolhar</div>
+            </div>
+            <div class="logo-icon-area">
+              <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" fill="var(--color-accent)"/>
+                <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+                <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Full lockup dark bg -->
+        <div class="type-specimen" style="padding: 3rem; background: var(--color-primary);">
+          <div class="type-label" style="color: rgba(255,255,255,0.4);">Celoten logotip — temna podlaga</div>
+          <div class="logo-lockup logo-variant">
+            <div class="logo-wordmark-area" style="background: transparent;">
+              <div class="wordmark" style="color: var(--color-accent);">Dolhar</div>
+            </div>
+            <div class="logo-icon-area">
+              <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" fill="var(--color-accent)"/>
+                <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+                <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- Icon only -->
+        <div class="type-specimen" style="text-align: center; padding: 3rem;">
+          <div class="type-label">Samo ikona (favicon, avatar)</div>
+          <svg style="width: 80px; height: 80px;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <rect width="100" height="100" fill="#0CA69E"/>
+            <rect x="17" y="17" width="66" height="66" fill="var(--color-accent)"/>
+            <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+            <rect x="32" y="32" width="36" height="36" fill="var(--color-primary)"/>
+          </svg>
+        </div>
+
+        <!-- Wordmark only -->
+        <div class="type-specimen" style="text-align: center; padding: 3rem;">
+          <div class="type-label">Samo wordmark</div>
+          <div class="logo-case" style="font-family: var(--font-display); font-size: 2.5rem; font-weight: 700; color: var(--color-primary); letter-spacing: var(--logo-letter-spacing);">Dolhar</div>
+          <div style="font-family: var(--font-body); font-size: 0.6rem; color: var(--color-mid-gray); letter-spacing: 0.25em; text-transform: uppercase; margin-top: 0.5rem;">Odvetniška družba</div>
+        </div>
+
+        <!-- Monochrome -->
+        <div class="type-specimen" style="padding: 3rem; background: #fff;">
+          <div class="type-label">Enobarvna (črna)</div>
+          <div class="logo-lockup logo-variant">
+            <div class="logo-wordmark-area" style="background: #000;">
+              <div class="wordmark" style="color: #fff;">Dolhar</div>
+            </div>
+            <div class="logo-icon-area">
+              <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" fill="#555"/>
+                <rect x="17" y="17" width="66" height="66" fill="#333"/>
+                <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+                <rect x="32" y="32" width="36" height="36" fill="#000"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+
+        <!-- White on dark -->
+        <div class="type-specimen" style="padding: 3rem; background: #1a1a1a;">
+          <div class="type-label" style="color: rgba(255,255,255,0.4);">Enobarvna (bela)</div>
+          <div class="logo-lockup logo-variant">
+            <div class="logo-wordmark-area" style="background: transparent; border: 1px solid rgba(255,255,255,0.3);">
+              <div class="wordmark" style="color: #fff;">Dolhar</div>
+            </div>
+            <div class="logo-icon-area">
+              <svg class="logo-icon" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                <rect width="100" height="100" fill="rgba(255,255,255,0.25)"/>
+                <rect x="17" y="17" width="66" height="66" fill="rgba(255,255,255,0.12)"/>
+                <rect x="15" y="15" width="70" height="70" fill="none" stroke="#fff" stroke-width="3"/>
+                <rect x="32" y="32" width="36" height="36" fill="#1a1a1a"/>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </div>
+
+  <script src="js/main.js"></script>
+</body>
+</html>

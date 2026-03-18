@@ -1,0 +1,168 @@
+/*
+ * Dolhar o.p. d.o.o. — Brand Design Tokens
+ * Sample 3: Monochrome — black & white only
+ */
+
+/* ============================================
+   ČRNA — black on white
+   ============================================ */
+[data-theme="black"] {
+  --color-primary:       #000000;
+  --color-primary-light: #333333;
+  --color-primary-dark:  #000000;
+  --color-accent:        #555555;
+  --color-accent-light:  #333333;
+  --color-accent-muted:  #999999;
+  --color-icon-stroke:   #ffffff;
+
+  --color-white:         #FFFFFF;
+  --color-cream:         #FAFAFA;
+  --color-light-gray:    #E8E8E8;
+  --color-mid-gray:      #999999;
+  --color-dark-gray:     #444444;
+  --color-black:         #000000;
+
+  --color-bg:            #FFFFFF;
+  --color-text:          #000000;
+  --color-border:        #DDDDDD;
+
+  --font-display:        'Cinzel', 'Georgia', serif;
+  --font-heading:        'Cinzel', 'Georgia', serif;
+  --font-body:           'Inter', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.15em;
+  --heading-letter-spacing: 0.01em;
+  --border-style:        1px solid #000;
+  --border-accent:       1px solid #DDDDDD;
+}
+
+/* ============================================
+   BELA — white on black (inverted)
+   ============================================ */
+[data-theme="white"] {
+  --color-primary:       #FFFFFF;
+  --color-primary-light: #CCCCCC;
+  --color-primary-dark:  #FFFFFF;
+  --color-accent:        #AAAAAA;
+  --color-accent-light:  #CCCCCC;
+  --color-accent-muted:  #777777;
+  --color-icon-stroke:   #000000;
+
+  --color-white:         #000000;
+  --color-cream:         #111111;
+  --color-light-gray:    #222222;
+  --color-mid-gray:      #777777;
+  --color-dark-gray:     #BBBBBB;
+  --color-black:         #FFFFFF;
+
+  --color-bg:            #000000;
+  --color-text:          #FFFFFF;
+  --color-border:        #333333;
+
+  --font-display:        'Cinzel', 'Georgia', serif;
+  --font-heading:        'Cinzel', 'Georgia', serif;
+  --font-body:           'Inter', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.15em;
+  --heading-letter-spacing: 0.01em;
+  --border-style:        1px solid #fff;
+  --border-accent:       1px solid #333333;
+}
+
+/* ============================================
+   TYPOGRAPHY OVERRIDES (data-typo)
+   ============================================ */
+
+[data-typo="cinzel"] {
+  --font-display:        'Cinzel', 'Georgia', serif;
+  --font-heading:        'Cinzel', 'Georgia', serif;
+  --font-body:           'Inter', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.15em;
+}
+
+[data-typo="playfair"] {
+  --font-display:        'Playfair Display', 'Georgia', serif;
+  --font-heading:        'Libre Baskerville', 'Georgia', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.12em;
+}
+
+[data-typo="cormorant"] {
+  --font-display:        'Cormorant Garamond', 'Garamond', serif;
+  --font-heading:        'Cormorant Garamond', 'Garamond', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.15em;
+}
+
+[data-typo="dmsans"] {
+  --font-display:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-heading:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-body:           'DM Sans', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.18em;
+}
+
+[data-typo="ebgaramond"] {
+  --font-display:        'EB Garamond', 'Garamond', serif;
+  --font-heading:        'EB Garamond', 'Garamond', serif;
+  --font-body:           'Inter', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.10em;
+}
+
+[data-typo="lora"] {
+  --font-display:        'Lora', 'Georgia', serif;
+  --font-heading:        'Lora', 'Georgia', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.12em;
+}
+
+/* ============================================
+   LOGO CASE (data-logocase)
+   ============================================ */
+[data-logocase="upper"]   { --logo-text-transform: uppercase; }
+[data-logocase="sentence"]{ --logo-text-transform: none; }
+
+.logo-case { text-transform: var(--logo-text-transform, uppercase); }
+
+/* ============================================
+   BODY FONT OVERRIDE
+   ============================================ */
+[data-bodycinzel="on"] {
+  --font-body: 'EB Garamond', 'Georgia', serif;
+}
+
+/* ============================================
+   Common tokens
+   ============================================ */
+:root {
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   2rem;
+  --space-xl:   4rem;
+  --space-2xl:  6rem;
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   2rem;
+  --text-4xl:   2.5rem;
+  --text-5xl:   3.5rem;
+
+  --line-height-tight:   1.2;
+  --line-height-normal:  1.6;
+  --line-height-loose:   1.8;
+
+  --radius-sm:  2px;
+  --radius-md:  4px;
+
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg:  0 8px 30px rgba(0,0,0,0.12);
+
+  --page-max-width: 1200px;
+}

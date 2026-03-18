@@ -1,0 +1,326 @@
+/*
+ * Dolhar o.p. d.o.o. — Brand Design Tokens
+ * Three style variants for comparison
+ */
+
+/* ============================================
+   VARIANT A: Klasičen & konservativen
+   Inspired by heritage law firm branding
+   (old Freshfields, classic Burberry)
+   ============================================ */
+[data-theme="classic"] {
+  /* Primary palette */
+  --color-primary:       #1B2A4A;  /* Deep navy */
+  --color-primary-light: #2C4066;
+  --color-primary-dark:  #111D33;
+  --color-accent:        #B8860B;  /* Dark goldenrod */
+  --color-accent-light:  #D4A017;
+  --color-accent-muted:  #C9B06B;
+
+  /* Neutrals */
+  --color-white:         #FFFFFF;
+  --color-cream:         #FAF7F2;
+  --color-light-gray:    #F0ECE4;
+  --color-mid-gray:      #8C8578;
+  --color-dark-gray:     #4A4540;
+  --color-black:         #1A1714;
+
+  /* Typography */
+  --font-display:        'Playfair Display', 'Georgia', serif;
+  --font-heading:        'Libre Baskerville', 'Georgia', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  /* Spacing & sizing */
+  --logo-letter-spacing: 0.25em;
+  --heading-letter-spacing: 0.02em;
+  --border-style:        2px solid var(--color-primary);
+  --border-accent:       1px solid var(--color-accent);
+}
+
+/* ============================================
+   VARIANT A-T: Klasičen & konservativen — Teal
+   Heritage serif branding with teal accent
+   ============================================ */
+[data-theme="classic-teal"] {
+  --color-primary:       #1B2A4A;  /* Deep navy */
+  --color-primary-light: #2C4066;
+  --color-primary-dark:  #111D33;
+  --color-accent:        #2A7B72;  /* Deep teal */
+  --color-accent-light:  #3A9E93;
+  --color-accent-muted:  #6BADA5;
+
+  --color-white:         #FFFFFF;
+  --color-cream:         #F5FAF9;
+  --color-light-gray:    #E8F0EE;
+  --color-mid-gray:      #7A8B88;
+  --color-dark-gray:     #3E4A48;
+  --color-black:         #1A1F1E;
+
+  --font-display:        'Playfair Display', 'Georgia', serif;
+  --font-heading:        'Libre Baskerville', 'Georgia', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.25em;
+  --heading-letter-spacing: 0.02em;
+  --border-style:        2px solid var(--color-primary);
+  --border-accent:       1px solid var(--color-accent);
+}
+
+/* ============================================
+   VARIANT B: Moderen & minimalen
+   Clean lines, contemporary sans-serif
+   ============================================ */
+[data-theme="modern"] {
+  --color-primary:       #2D2D2D;  /* Anthracite */
+  --color-primary-light: #484848;
+  --color-primary-dark:  #1A1A1A;
+  --color-accent:        #1A3A5C;  /* Steel blue */
+  --color-accent-light:  #2A5580;
+  --color-accent-muted:  #6B8FAD;
+
+  --color-white:         #FFFFFF;
+  --color-cream:         #FAFAFA;
+  --color-light-gray:    #F5F5F5;
+  --color-mid-gray:      #9E9E9E;
+  --color-dark-gray:     #616161;
+  --color-black:         #212121;
+
+  --font-display:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-heading:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-body:           'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.35em;
+  --heading-letter-spacing: 0.01em;
+  --border-style:        1px solid var(--color-primary);
+  --border-accent:       1px solid var(--color-accent);
+}
+
+/* ============================================
+   VARIANT B-T: Moderen & minimalen — Teal
+   Contemporary sans-serif with teal accent
+   ============================================ */
+[data-theme="modern-teal"] {
+  --color-primary:       #2D2D2D;  /* Anthracite */
+  --color-primary-light: #484848;
+  --color-primary-dark:  #1A1A1A;
+  --color-accent:        #1A7B72;  /* Vivid teal */
+  --color-accent-light:  #24A196;
+  --color-accent-muted:  #5BB8B0;
+
+  --color-white:         #FFFFFF;
+  --color-cream:         #F7FCFB;
+  --color-light-gray:    #F0F7F6;
+  --color-mid-gray:      #9E9E9E;
+  --color-dark-gray:     #616161;
+  --color-black:         #212121;
+
+  --font-display:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-heading:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-body:           'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.35em;
+  --heading-letter-spacing: 0.01em;
+  --border-style:        1px solid var(--color-primary);
+  --border-accent:       1px solid var(--color-accent);
+}
+
+/* ============================================
+   VARIANT C: Eleganten & sofisticiran
+   Refined serif + sans-serif pairing
+   ============================================ */
+[data-theme="elegant"] {
+  --color-primary:       #1C2951;  /* Deep royal blue */
+  --color-primary-light: #2A3D6B;
+  --color-primary-dark:  #121B38;
+  --color-accent:        #6B2D3E;  /* Burgundy */
+  --color-accent-light:  #8B3D52;
+  --color-accent-muted:  #9E7080;
+
+  --color-white:         #FFFFFF;
+  --color-cream:         #FAF8F5;
+  --color-light-gray:    #F0EDE8;
+  --color-mid-gray:      #8A8480;
+  --color-dark-gray:     #4A4644;
+  --color-black:         #1C1A18;
+
+  --font-display:        'Cormorant Garamond', 'Garamond', serif;
+  --font-heading:        'Cormorant Garamond', 'Garamond', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.30em;
+  --heading-letter-spacing: 0.03em;
+  --border-style:        1px solid var(--color-primary);
+  --border-accent:       1px solid var(--color-accent);
+}
+
+/* ============================================
+   VARIANT C-T: Eleganten & sofisticiran — Teal
+   Refined serif + sans-serif with teal accent
+   ============================================ */
+[data-theme="elegant-teal"] {
+  --color-primary:       #1C2951;  /* Deep royal blue */
+  --color-primary-light: #2A3D6B;
+  --color-primary-dark:  #121B38;
+  --color-accent:        #1F6B6B;  /* Dark teal */
+  --color-accent-light:  #2D8A8A;
+  --color-accent-muted:  #6BAAAA;
+
+  --color-white:         #FFFFFF;
+  --color-cream:         #F5FAF9;
+  --color-light-gray:    #ECF2F0;
+  --color-mid-gray:      #8A8E8D;
+  --color-dark-gray:     #4A4E4D;
+  --color-black:         #1C1E1D;
+
+  --font-display:        'Cormorant Garamond', 'Garamond', serif;
+  --font-heading:        'Cormorant Garamond', 'Garamond', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --font-mono:           'JetBrains Mono', monospace;
+
+  --logo-letter-spacing: 0.30em;
+  --heading-letter-spacing: 0.03em;
+  --border-style:        1px solid var(--color-primary);
+  --border-accent:       1px solid var(--color-accent);
+}
+
+/* ============================================
+   TYPOGRAPHY OVERRIDES (data-typo)
+   "auto" = inherit from theme; others override
+   ============================================ */
+
+/* Playfair — bold classic serif (Playfair Display + Libre Baskerville + Source Sans 3) */
+[data-typo="playfair"] {
+  --font-display:        'Playfair Display', 'Georgia', serif;
+  --font-heading:        'Libre Baskerville', 'Georgia', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.25em;
+  --heading-letter-spacing: 0.02em;
+}
+
+/* Cormorant — refined European serif (Cormorant Garamond + Source Sans 3) */
+[data-typo="cormorant"] {
+  --font-display:        'Cormorant Garamond', 'Garamond', serif;
+  --font-heading:        'Cormorant Garamond', 'Garamond', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.30em;
+  --heading-letter-spacing: 0.03em;
+}
+
+/* DM Sans — clean minimalist sans-serif */
+[data-typo="dmsans"] {
+  --font-display:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-heading:        'DM Sans', 'Helvetica Neue', sans-serif;
+  --font-body:           'DM Sans', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.35em;
+  --heading-letter-spacing: 0.01em;
+}
+
+/* EB Garamond — traditional legal serif (EB Garamond + Inter) */
+[data-typo="ebgaramond"] {
+  --font-display:        'EB Garamond', 'Garamond', serif;
+  --font-heading:        'EB Garamond', 'Garamond', serif;
+  --font-body:           'Inter', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.20em;
+  --heading-letter-spacing: 0.02em;
+}
+
+/* Lora — warm, readable transitional serif (Lora + Source Sans 3) */
+[data-typo="lora"] {
+  --font-display:        'Lora', 'Georgia', serif;
+  --font-heading:        'Lora', 'Georgia', serif;
+  --font-body:           'Source Sans 3', 'Helvetica Neue', sans-serif;
+  --logo-letter-spacing: 0.22em;
+  --heading-letter-spacing: 0.02em;
+}
+
+/* ============================================
+   LOGO CASE (data-logocase)
+   ============================================ */
+[data-logocase="upper"]   { --logo-text-transform: uppercase; }
+[data-logocase="sentence"]{ --logo-text-transform: none; }
+
+/* Helper class for elements not covered by CSS selectors (e.g. type specimens) */
+.logo-case { text-transform: var(--logo-text-transform, uppercase); }
+
+/* ============================================
+   Common tokens (all themes)
+   ============================================ */
+:root {
+  --space-xs:   0.25rem;
+  --space-sm:   0.5rem;
+  --space-md:   1rem;
+  --space-lg:   2rem;
+  --space-xl:   4rem;
+  --space-2xl:  6rem;
+
+  --text-xs:    0.75rem;
+  --text-sm:    0.875rem;
+  --text-base:  1rem;
+  --text-lg:    1.125rem;
+  --text-xl:    1.25rem;
+  --text-2xl:   1.5rem;
+  --text-3xl:   2rem;
+  --text-4xl:   2.5rem;
+  --text-5xl:   3.5rem;
+
+  --line-height-tight:   1.2;
+  --line-height-normal:  1.6;
+  --line-height-loose:   1.8;
+
+  --radius-sm:  2px;
+  --radius-md:  4px;
+
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 12px rgba(0,0,0,0.1);
+  --shadow-lg:  0 8px 30px rgba(0,0,0,0.12);
+
+  --page-max-width: 1200px;
+}
+
+/* ============================================
+   Designer's teal palette override
+   Source: Dolhar-elementi.ai (Dec 2025)
+   Navy #081D31, Teal #0CA69E
+   ============================================ */
+
+/* Classic-teal → designer colors */
+[data-teal="designer"][data-theme="classic-teal"] {
+  --color-primary:       #081D31;
+  --color-primary-light: #0F2E4A;
+  --color-primary-dark:  #041220;
+  --color-accent:        #0CA69E;
+  --color-accent-light:  #14BFB6;
+  --color-accent-muted:  #5DC9C3;
+  --color-cream:         #F5FAFA;
+  --color-light-gray:    #E6F2F1;
+  --color-mid-gray:      #6E8A88;
+  --color-dark-gray:     #354543;
+  --color-black:         #0A1A18;
+}
+
+/* Modern-teal → designer teal, keep anthracite primary */
+[data-teal="designer"][data-theme="modern-teal"] {
+  --color-accent:        #0CA69E;
+  --color-accent-light:  #14BFB6;
+  --color-accent-muted:  #5DC9C3;
+}
+
+/* Elegant-teal → designer colors */
+[data-teal="designer"][data-theme="elegant-teal"] {
+  --color-primary:       #081D31;
+  --color-primary-light: #0F2E4A;
+  --color-primary-dark:  #041220;
+  --color-accent:        #0CA69E;
+  --color-accent-light:  #14BFB6;
+  --color-accent-muted:  #5DC9C3;
+  --color-cream:         #F5FAFA;
+  --color-light-gray:    #E6F2F1;
+  --color-mid-gray:      #6E8A88;
+  --color-dark-gray:     #354543;
+  --color-black:         #0A1A18;
+}
