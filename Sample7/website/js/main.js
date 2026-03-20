@@ -25,7 +25,6 @@ document.addEventListener('DOMContentLoaded', () => {
     set(saved);
   }
 
-  setupToggle('.teal-btn', 'teal', 'dolhar7-teal', 'custom');
   setupToggle('.logocase-btn', 'logocase', 'dolhar7-logocase', 'upper');
   setupToggle('.bodyfont-btn', 'bodyfont', 'dolhar7-bodyfont', 'sans');
   setupToggle('.stampfirm-btn', 'stampfirm', 'dolhar7-stampfirm', 'full');
