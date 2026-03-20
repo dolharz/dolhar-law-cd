@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="sl" data-theme="classic-teal" data-teal="custom" data-mode="light" data-typo="cinzel" data-logocase="upper">
+<html lang="sl" data-theme="classic-teal" data-teal="custom" data-mode="light" data-typo="cinzel" data-logocase="upper" data-docstampshape="round" data-docstampcolor="teal">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -34,6 +34,15 @@
     <button class="stampfirm-btn active" data-stampfirm="full">Polna</button>
     <button class="stampfirm-btn" data-stampfirm="short">Skrajšana</button>
     <button class="stampfirm-btn" data-stampfirm="horiz">Horizontalno</button>
+    <span class="switcher-divider"></span>
+    <span>Žig na dok.:</span>
+    <button class="docstampshape-btn active" data-docstampshape="round">Okrogel</button>
+    <button class="docstampshape-btn" data-docstampshape="rect">Pravokoten</button>
+    <span class="switcher-divider"></span>
+    <span>Barva žiga:</span>
+    <button class="docstampcolor-btn active" data-docstampcolor="teal">Teal</button>
+    <button class="docstampcolor-btn" data-docstampcolor="bw">Črnobela</button>
+    <button class="docstampcolor-btn" data-docstampcolor="ink">Blazinica</button>
     <span class="switcher-divider"></span>
     <span>Način:</span>
     <button class="mode-btn active" data-mode="light">Light</button>
@@ -273,23 +282,35 @@
               <span style="font-size: 0.8rem; color: var(--color-mid-gray);">Odvetnik</span>
             </div>
             <div style="position: relative;">
-              <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width: 145px; height: 145px; opacity: 0.7; transform: rotate(-8deg);">
-                <circle cx="120" cy="120" r="114" fill="none" stroke="var(--color-accent)" stroke-width="3"/>
-                <circle cx="120" cy="120" r="105" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
+              <!-- Okrogel žig -->
+              <svg class="doc-stamp-round" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width: 145px; height: 145px; opacity: 0.7; transform: rotate(-8deg);">
+                <circle cx="120" cy="120" r="114" fill="none" stroke="var(--doc-stamp-color)" stroke-width="3"/>
+                <circle cx="120" cy="120" r="105" fill="none" stroke="var(--doc-stamp-color)" stroke-width="1.5"/>
                 <defs>
                   <path id="topArcLH" d="M 30,120 a 90,90 0 1,1 180,0" fill="none"/>
                   <path id="bottomArcLH" d="M 210,120 a 90,90 0 1,1 -180,0" fill="none"/>
                 </defs>
-                <text class="stamp-firm-text" font-family="var(--font-body)" font-size="13" fill="var(--color-accent)" letter-spacing="0.1em">
+                <text class="stamp-firm-text" font-family="var(--font-body)" font-size="13" fill="var(--doc-stamp-color)" letter-spacing="0.1em">
                   <textPath href="#topArcLH" startOffset="50%" text-anchor="middle">ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.</textPath>
                 </text>
-                <text class="stamp-firm-horiz" font-family="var(--font-body)" font-size="18" fill="var(--color-accent)" letter-spacing="0.1em" text-anchor="middle" x="120" y="80" display="none" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="11" font-weight="400" letter-spacing="0.04em" dx="4">o.p. d.o.o.</tspan></text>
-                <text font-family="var(--font-body)" font-size="11.5" fill="var(--color-accent)" letter-spacing="0.05em">
+                <text class="stamp-firm-horiz" font-family="var(--font-body)" font-size="18" fill="var(--doc-stamp-color)" letter-spacing="0.1em" text-anchor="middle" x="120" y="80" display="none" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="11" font-weight="400" letter-spacing="0.04em" dx="4">o.p. d.o.o.</tspan></text>
+                <text font-family="var(--font-body)" font-size="11.5" fill="var(--doc-stamp-color)" letter-spacing="0.05em">
                   <textPath href="#bottomArcLH" startOffset="50%" text-anchor="middle">GOSPOSVETSKA CESTA 11 · 1000 LJUBLJANA</textPath>
                 </text>
-                <rect x="95" y="95" width="50" height="50" fill="var(--color-accent)"/>
+                <rect x="95" y="95" width="50" height="50" fill="var(--doc-stamp-color)"/>
                 <rect x="102.5" y="102.5" width="35" height="35" fill="none" stroke="#fff" stroke-width="1.5"/>
-                <rect x="111.5" y="111.5" width="17" height="17" fill="var(--color-accent)" stroke="#fff" stroke-width="1.5"/>
+                <rect x="111.5" y="111.5" width="17" height="17" fill="var(--doc-stamp-color)" stroke="#fff" stroke-width="1.5"/>
+              </svg>
+              <!-- Pravokoten žig -->
+              <svg class="doc-stamp-rect" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" style="width: 180px; opacity: 0.7; transform: rotate(-5deg);">
+                <rect x="3" y="3" width="294" height="114" fill="none" stroke="var(--doc-stamp-color)" stroke-width="2.5"/>
+                <rect x="8" y="8" width="284" height="104" fill="none" stroke="var(--doc-stamp-color)" stroke-width="0.8"/>
+                <rect x="20" y="25" width="54" height="54" fill="var(--doc-stamp-color)"/>
+                <rect x="27.5" y="32.5" width="39" height="39" fill="none" stroke="#fff" stroke-width="2"/>
+                <rect x="37" y="42" width="20" height="20" fill="var(--doc-stamp-color)" stroke="#fff" stroke-width="2"/>
+                <text x="88" y="50" font-family="var(--font-display)" font-size="24" font-weight="700" fill="var(--doc-stamp-color)" letter-spacing="0.15em" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="13" font-weight="400" letter-spacing="0.04em" dx="6">o.p. d.o.o.</tspan></text>
+                <line x1="88" y1="62" x2="285" y2="62" stroke="var(--doc-stamp-color)" stroke-width="0.8"/>
+                <text x="88" y="78" font-family="var(--font-body)" font-size="12" fill="var(--doc-stamp-color)">Gosposvetska cesta 11, 1000 Ljubljana</text>
               </svg>
               <!-- Faksimile podpisa -->
               <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 20px; left: -40px; width: 180px; opacity: 0.8; transform: rotate(-3deg); pointer-events: none;">
@@ -384,16 +405,28 @@
                 Slovenska cesta 1, 1000 Ljubljana<br>
                 <span class="cf-small" style="display: inline-flex; align-items: center; gap: 0.5rem;">
                   ki jo zastopa: Odvetniška družba Dolhar o.p. d.o.o., Gosposvetska c. 11, 1000 Ljubljana
-                  <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width: 145px; height: 145px; opacity: 0.7; transform: rotate(-5deg); flex-shrink: 0;">
-                    <circle cx="120" cy="120" r="114" fill="none" stroke="var(--color-accent)" stroke-width="3"/>
-                    <circle cx="120" cy="120" r="105" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
+                  <!-- Okrogel žig -->
+                  <svg class="doc-stamp-round" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width: 145px; height: 145px; opacity: 0.7; transform: rotate(-5deg); flex-shrink: 0;">
+                    <circle cx="120" cy="120" r="114" fill="none" stroke="var(--doc-stamp-color)" stroke-width="3"/>
+                    <circle cx="120" cy="120" r="105" fill="none" stroke="var(--doc-stamp-color)" stroke-width="1.5"/>
                     <defs><path id="topArcCF1" d="M 30,120 a 90,90 0 1,1 180,0" fill="none"/><path id="bottomArcCF1" d="M 210,120 a 90,90 0 1,1 -180,0" fill="none"/></defs>
-                    <text class="stamp-firm-text" font-family="var(--font-body)" font-size="13" fill="var(--color-accent)" letter-spacing="0.1em"><textPath href="#topArcCF1" startOffset="50%" text-anchor="middle">ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.</textPath></text>
-                    <text class="stamp-firm-horiz" font-family="var(--font-body)" font-size="18" fill="var(--color-accent)" letter-spacing="0.1em" text-anchor="middle" x="120" y="80" display="none" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="11" font-weight="400" letter-spacing="0.04em" dx="4">o.p. d.o.o.</tspan></text>
-                    <text font-family="var(--font-body)" font-size="11.5" fill="var(--color-accent)" letter-spacing="0.05em"><textPath href="#bottomArcCF1" startOffset="50%" text-anchor="middle">GOSPOSVETSKA CESTA 11 · 1000 LJUBLJANA</textPath></text>
-                    <rect x="95" y="95" width="50" height="50" fill="var(--color-accent)"/>
+                    <text class="stamp-firm-text" font-family="var(--font-body)" font-size="13" fill="var(--doc-stamp-color)" letter-spacing="0.1em"><textPath href="#topArcCF1" startOffset="50%" text-anchor="middle">ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.</textPath></text>
+                    <text class="stamp-firm-horiz" font-family="var(--font-body)" font-size="18" fill="var(--doc-stamp-color)" letter-spacing="0.1em" text-anchor="middle" x="120" y="80" display="none" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="11" font-weight="400" letter-spacing="0.04em" dx="4">o.p. d.o.o.</tspan></text>
+                    <text font-family="var(--font-body)" font-size="11.5" fill="var(--doc-stamp-color)" letter-spacing="0.05em"><textPath href="#bottomArcCF1" startOffset="50%" text-anchor="middle">GOSPOSVETSKA CESTA 11 · 1000 LJUBLJANA</textPath></text>
+                    <rect x="95" y="95" width="50" height="50" fill="var(--doc-stamp-color)"/>
                     <rect x="102.5" y="102.5" width="35" height="35" fill="none" stroke="#fff" stroke-width="1.5"/>
-                    <rect x="111.5" y="111.5" width="17" height="17" fill="var(--color-accent)" stroke="#fff" stroke-width="1.5"/>
+                    <rect x="111.5" y="111.5" width="17" height="17" fill="var(--doc-stamp-color)" stroke="#fff" stroke-width="1.5"/>
+                  </svg>
+                  <!-- Pravokoten žig -->
+                  <svg class="doc-stamp-rect" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" style="width: 160px; opacity: 0.7; transform: rotate(-3deg); flex-shrink: 0;">
+                    <rect x="3" y="3" width="294" height="114" fill="none" stroke="var(--doc-stamp-color)" stroke-width="2.5"/>
+                    <rect x="8" y="8" width="284" height="104" fill="none" stroke="var(--doc-stamp-color)" stroke-width="0.8"/>
+                    <rect x="20" y="25" width="54" height="54" fill="var(--doc-stamp-color)"/>
+                    <rect x="27.5" y="32.5" width="39" height="39" fill="none" stroke="#fff" stroke-width="2"/>
+                    <rect x="37" y="42" width="20" height="20" fill="var(--doc-stamp-color)" stroke="#fff" stroke-width="2"/>
+                    <text x="88" y="50" font-family="var(--font-display)" font-size="24" font-weight="700" fill="var(--doc-stamp-color)" letter-spacing="0.15em" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="13" font-weight="400" letter-spacing="0.04em" dx="6">o.p. d.o.o.</tspan></text>
+                    <line x1="88" y1="62" x2="285" y2="62" stroke="var(--doc-stamp-color)" stroke-width="0.8"/>
+                    <text x="88" y="78" font-family="var(--font-body)" font-size="12" fill="var(--doc-stamp-color)">Gosposvetska cesta 11, 1000 Ljubljana</text>
                   </svg>
                 </span>
               </td>
@@ -501,23 +534,35 @@
           <!-- Podpis -->
           <div class="cf-signature" style="display: flex; align-items: flex-end; justify-content: flex-end; gap: 1.25rem;">
             <div style="position: relative;">
-              <svg viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width: 145px; height: 145px; opacity: 0.7; transform: rotate(5deg);">
-                <circle cx="120" cy="120" r="114" fill="none" stroke="var(--color-accent)" stroke-width="3"/>
-                <circle cx="120" cy="120" r="105" fill="none" stroke="var(--color-accent)" stroke-width="1.5"/>
+              <!-- Okrogel žig -->
+              <svg class="doc-stamp-round" viewBox="0 0 240 240" xmlns="http://www.w3.org/2000/svg" style="width: 145px; height: 145px; opacity: 0.7; transform: rotate(5deg);">
+                <circle cx="120" cy="120" r="114" fill="none" stroke="var(--doc-stamp-color)" stroke-width="3"/>
+                <circle cx="120" cy="120" r="105" fill="none" stroke="var(--doc-stamp-color)" stroke-width="1.5"/>
                 <defs>
                   <path id="topArcCF" d="M 30,120 a 90,90 0 1,1 180,0" fill="none"/>
                   <path id="bottomArcCF" d="M 210,120 a 90,90 0 1,1 -180,0" fill="none"/>
                 </defs>
-                <text class="stamp-firm-text" font-family="var(--font-body)" font-size="13" fill="var(--color-accent)" letter-spacing="0.1em">
+                <text class="stamp-firm-text" font-family="var(--font-body)" font-size="13" fill="var(--doc-stamp-color)" letter-spacing="0.1em">
                   <textPath href="#topArcCF" startOffset="50%" text-anchor="middle">ODVETNIŠKA DRUŽBA DOLHAR O.P. D.O.O.</textPath>
                 </text>
-                <text class="stamp-firm-horiz" font-family="var(--font-body)" font-size="18" fill="var(--color-accent)" letter-spacing="0.1em" text-anchor="middle" x="120" y="80" display="none" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="11" font-weight="400" letter-spacing="0.04em" dx="4">o.p. d.o.o.</tspan></text>
-                <text font-family="var(--font-body)" font-size="11.5" fill="var(--color-accent)" letter-spacing="0.05em">
+                <text class="stamp-firm-horiz" font-family="var(--font-body)" font-size="18" fill="var(--doc-stamp-color)" letter-spacing="0.1em" text-anchor="middle" x="120" y="80" display="none" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="11" font-weight="400" letter-spacing="0.04em" dx="4">o.p. d.o.o.</tspan></text>
+                <text font-family="var(--font-body)" font-size="11.5" fill="var(--doc-stamp-color)" letter-spacing="0.05em">
                   <textPath href="#bottomArcCF" startOffset="50%" text-anchor="middle">GOSPOSVETSKA CESTA 11 · 1000 LJUBLJANA</textPath>
                 </text>
-                <rect x="95" y="95" width="50" height="50" fill="var(--color-accent)"/>
+                <rect x="95" y="95" width="50" height="50" fill="var(--doc-stamp-color)"/>
                 <rect x="102.5" y="102.5" width="35" height="35" fill="none" stroke="#fff" stroke-width="1.5"/>
-                <rect x="111.5" y="111.5" width="17" height="17" fill="var(--color-accent)" stroke="#fff" stroke-width="1.5"/>
+                <rect x="111.5" y="111.5" width="17" height="17" fill="var(--doc-stamp-color)" stroke="#fff" stroke-width="1.5"/>
+              </svg>
+              <!-- Pravokoten žig -->
+              <svg class="doc-stamp-rect" viewBox="0 0 300 120" xmlns="http://www.w3.org/2000/svg" style="width: 180px; opacity: 0.7; transform: rotate(3deg);">
+                <rect x="3" y="3" width="294" height="114" fill="none" stroke="var(--doc-stamp-color)" stroke-width="2.5"/>
+                <rect x="8" y="8" width="284" height="104" fill="none" stroke="var(--doc-stamp-color)" stroke-width="0.8"/>
+                <rect x="20" y="25" width="54" height="54" fill="var(--doc-stamp-color)"/>
+                <rect x="27.5" y="32.5" width="39" height="39" fill="none" stroke="#fff" stroke-width="2"/>
+                <rect x="37" y="42" width="20" height="20" fill="var(--doc-stamp-color)" stroke="#fff" stroke-width="2"/>
+                <text x="88" y="50" font-family="var(--font-display)" font-size="24" font-weight="700" fill="var(--doc-stamp-color)" letter-spacing="0.15em" class="stamp-wordmark">DOLHAR<tspan font-family="var(--font-body)" font-size="13" font-weight="400" letter-spacing="0.04em" dx="6">o.p. d.o.o.</tspan></text>
+                <line x1="88" y1="62" x2="285" y2="62" stroke="var(--doc-stamp-color)" stroke-width="0.8"/>
+                <text x="88" y="78" font-family="var(--font-body)" font-size="12" fill="var(--doc-stamp-color)">Gosposvetska cesta 11, 1000 Ljubljana</text>
               </svg>
               <!-- Faksimile podpisa -->
               <svg viewBox="0 0 200 80" xmlns="http://www.w3.org/2000/svg" style="position: absolute; bottom: 15px; right: -50px; width: 180px; opacity: 0.8; transform: rotate(-2deg); pointer-events: none;">

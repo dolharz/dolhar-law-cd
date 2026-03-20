@@ -164,6 +164,31 @@ body {
   border-color: #fff;
 }
 
+.docstampshape-btn,
+.docstampcolor-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.docstampshape-btn:hover,
+.docstampcolor-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.docstampshape-btn.active,
+.docstampcolor-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
 .mode-btn {
   padding: 0.4rem 1rem;
   border: 1px solid #555;
@@ -185,6 +210,15 @@ body {
   color: #1a1a1a;
   border-color: #fff;
 }
+
+/* Document stamp shape toggle */
+[data-docstampshape="round"] .doc-stamp-rect { display: none !important; }
+[data-docstampshape="rect"] .doc-stamp-round { display: none !important; }
+
+/* Document stamp color */
+[data-docstampcolor="teal"] { --doc-stamp-color: var(--color-accent); }
+[data-docstampcolor="bw"] { --doc-stamp-color: #000; }
+[data-docstampcolor="ink"] { --doc-stamp-color: #009A85; }
 
 /* === Layout === */
 .page {

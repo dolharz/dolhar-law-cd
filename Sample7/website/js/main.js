@@ -29,6 +29,8 @@ document.addEventListener('DOMContentLoaded', () => {
   setupToggle('.logocase-btn', 'logocase', 'dolhar7-logocase', 'upper');
   setupToggle('.bodyfont-btn', 'bodyfont', 'dolhar7-bodyfont', 'sans');
   setupToggle('.stampfirm-btn', 'stampfirm', 'dolhar7-stampfirm', 'full');
+  setupToggle('.docstampshape-btn', 'docstampshape', 'dolhar7-docstampshape', 'round');
+  setupToggle('.docstampcolor-btn', 'docstampcolor', 'dolhar7-docstampcolor', 'teal');
   setupToggle('.mode-btn', 'mode', 'dolhar7-mode', 'light');
 
   // Sync stamp wordmarks with logo case toggle
