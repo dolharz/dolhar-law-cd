@@ -1,0 +1,1265 @@
+/*
+ * Dolhar o.p. d.o.o. — Corporate Design Comparison
+ */
+
+/* === Reset & Base === */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Source Sans 3', 'Helvetica Neue', sans-serif;
+  color: #333;
+  background: #F8F7F5;
+  line-height: 1.6;
+}
+
+/* === Theme Switcher === */
+.theme-switcher {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  background: #1a1a1a;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.theme-switcher span {
+  color: #999;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-right: 0.5rem;
+}
+
+.theme-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.theme-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.theme-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+.switcher-divider {
+  width: 1px;
+  height: 20px;
+  background: #444;
+  margin: 0 0.25rem;
+}
+
+.teal-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.teal-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.teal-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+.logocase-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.logocase-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.logocase-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+.bodyfont-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.bodyfont-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.bodyfont-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+.stampfirm-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.stampfirm-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.stampfirm-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+.mode-btn {
+  padding: 0.4rem 1rem;
+  border: 1px solid #555;
+  background: transparent;
+  color: #ccc;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  letter-spacing: 0.03em;
+}
+
+.mode-btn:hover {
+  border-color: #fff;
+  color: #fff;
+}
+
+.mode-btn.active {
+  background: #fff;
+  color: #1a1a1a;
+  border-color: #fff;
+}
+
+/* === Layout === */
+.page {
+  max-width: var(--page-max-width, 1200px);
+  margin: 0 auto;
+  padding: 0 2rem 4rem;
+}
+
+section {
+  margin-bottom: 4rem;
+}
+
+/* === Logo Lockup === */
+.logo-lockup {
+  display: inline-flex;
+  align-items: stretch;
+  overflow: hidden;
+}
+
+.logo-wordmark-area {
+  background: var(--color-primary);
+  display: flex;
+  align-items: center;
+  padding: 0 1.5em;
+}
+
+.logo-lockup .wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  letter-spacing: var(--logo-letter-spacing);
+  color: var(--wordmark-color, var(--color-accent));
+  line-height: 1;
+  white-space: nowrap;
+  text-transform: var(--logo-text-transform, uppercase);
+}
+
+.logo-icon-area {
+  display: flex;
+  align-items: center;
+}
+
+.logo-icon {
+  display: block;
+}
+
+/* Hero logo */
+.hero-logo .wordmark {
+  font-size: var(--text-5xl);
+}
+
+.hero-logo .logo-icon {
+  width: calc(var(--text-5xl) * 1.6);
+  height: calc(var(--text-5xl) * 1.6);
+}
+
+/* Variant logos (in grid) */
+.logo-variant .wordmark {
+  font-size: 2rem;
+}
+
+.logo-variant .logo-icon {
+  width: 68px;
+  height: 68px;
+}
+
+/* === Hero / Header === */
+
+/* Full (wide) hero — navy background */
+.hero-full {
+  text-align: center;
+  padding: 4rem 2rem;
+  background: var(--color-primary);
+  color: var(--color-white);
+  margin-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.hero-full .logo-wordmark-area {
+  background: transparent;
+}
+
+.hero-full .wordmark {
+  color: var(--color-accent-muted);
+}
+
+.hero-full .divider {
+  width: 60px;
+  height: 2px;
+  background: var(--color-accent);
+}
+
+.hero-full .firm-type {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.7;
+  font-weight: 300;
+}
+
+/* Slim hero — fixed, hidden by default, appears on scroll */
+.hero-slim {
+  position: fixed;
+  top: 0; /* JS overrides with actual nav height */
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 90;
+  background: #FFFFFF;
+  border-bottom: 1px solid var(--color-light-gray, #E8F0EE);
+  opacity: 0;
+  transform: translateY(-100%);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.hero-slim.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.hero-slim-inner {
+  max-width: var(--page-max-width, 1200px);
+  margin: 0 auto;
+  padding: 1.5rem 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
+
+.hero-slim-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.hero-slim-text {
+  display: flex;
+  align-items: baseline;
+  gap: 1.25rem;
+}
+
+.hero-slim-wordmark {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 1.75rem;
+  color: var(--color-primary);
+  letter-spacing: var(--logo-letter-spacing);
+  line-height: 1;
+  white-space: nowrap;
+}
+
+.hero-slim-rule {
+  width: 1px;
+  height: 1.25rem;
+  background: var(--color-mid-gray);
+  opacity: 0.4;
+  flex-shrink: 0;
+  align-self: center;
+}
+
+.hero-slim-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  letter-spacing: 0.25em;
+  text-transform: uppercase;
+  color: var(--color-mid-gray);
+  white-space: nowrap;
+}
+
+/* === Section headers === */
+.section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  letter-spacing: var(--heading-letter-spacing);
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  font-family: var(--font-body);
+  font-size: var(--text-sm);
+  color: var(--color-mid-gray);
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* === Color Palette === */
+.color-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1rem;
+}
+
+.color-swatch {
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  background: #fff;
+}
+
+.color-swatch .swatch-color {
+  height: 100px;
+  display: flex;
+  align-items: flex-end;
+  padding: 0.75rem;
+}
+
+.color-swatch .swatch-color span {
+  font-size: 0.75rem;
+  font-family: var(--font-mono, monospace);
+  letter-spacing: 0.02em;
+}
+
+.color-swatch .swatch-info {
+  padding: 0.75rem;
+}
+
+.color-swatch .swatch-name {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.color-swatch .swatch-var {
+  font-size: 0.75rem;
+  color: #999;
+  font-family: monospace;
+}
+
+/* === Typography === */
+.type-specimen {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  margin-bottom: 1.5rem;
+}
+
+.type-specimen .type-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-mid-gray);
+  margin-bottom: 1rem;
+  font-family: var(--font-body);
+}
+
+.type-specimen .type-sample-display {
+  font-family: var(--font-display);
+  font-size: var(--text-4xl);
+  color: var(--color-primary);
+  letter-spacing: var(--logo-letter-spacing);
+  line-height: 1.2;
+  margin-bottom: 0.5rem;
+}
+
+.type-specimen .type-sample-heading {
+  font-family: var(--font-heading);
+  font-size: var(--text-2xl);
+  color: var(--color-primary);
+  letter-spacing: var(--heading-letter-spacing);
+  line-height: 1.3;
+  margin-bottom: 0.5rem;
+}
+
+.type-specimen .type-sample-body {
+  font-family: var(--font-body);
+  font-size: var(--text-base);
+  color: var(--color-dark-gray);
+  line-height: var(--line-height-normal);
+  max-width: 60ch;
+}
+
+.type-specimen .type-meta {
+  font-size: 0.75rem;
+  color: var(--color-mid-gray);
+  margin-top: 0.75rem;
+  font-family: monospace;
+}
+
+/* === Business Card Mock === */
+.card-container {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.business-card {
+  width: 360px;
+  height: 210px;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+  flex-shrink: 0;
+}
+
+.business-card.front {
+  background: var(--color-white);
+  border: 1px solid var(--color-light-gray);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 2rem;
+  position: relative;
+}
+
+.business-card.front::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.card-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  margin-bottom: 0.25rem;
+}
+
+.card-icon {
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+}
+
+.business-card.front .card-firm {
+  font-family: var(--font-display);
+  font-size: 1.1rem;
+  color: var(--wordmark-color, var(--color-primary));
+  letter-spacing: var(--logo-letter-spacing);
+  font-weight: 700;
+  text-transform: var(--logo-text-transform, uppercase);
+}
+
+.business-card.front .card-type {
+  font-family: var(--font-body);
+  font-size: 0.6rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--color-mid-gray);
+  margin-bottom: 1.25rem;
+}
+
+.business-card.front .card-name {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  color: var(--color-primary);
+  margin-bottom: 0.15rem;
+}
+
+.business-card.front .card-title {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.business-card.back {
+  background: var(--color-primary);
+  color: var(--color-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  padding: 2rem;
+  position: relative;
+}
+
+.business-card.back::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: var(--color-accent);
+}
+
+.business-card.back .card-detail {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  line-height: 1.8;
+  opacity: 0.85;
+  letter-spacing: 0.02em;
+}
+
+.business-card.back .card-detail strong {
+  font-weight: 600;
+  opacity: 1;
+}
+
+/* === Letterhead Mock === */
+.letterhead-mock {
+  background: #fff;
+  width: 100%;
+  max-width: 680px;
+  min-height: 900px;
+  padding: 3rem;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  position: relative;
+  margin: 0 auto;
+}
+
+.letterhead-mock .lh-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 3rem;
+  padding-bottom: 1.5rem;
+  border-bottom: var(--border-accent);
+}
+
+.lh-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.lh-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.letterhead-mock .lh-firm {
+  font-family: var(--font-display);
+  font-size: 1.3rem;
+  color: var(--wordmark-color, var(--color-primary));
+  letter-spacing: var(--logo-letter-spacing);
+  font-weight: 700;
+  text-transform: var(--logo-text-transform, uppercase);
+}
+
+.letterhead-mock .lh-firm-sub {
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--color-mid-gray);
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  margin-top: 0.25rem;
+}
+
+.letterhead-mock .lh-contact {
+  text-align: right;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--color-mid-gray);
+  line-height: 1.8;
+}
+
+.letterhead-mock .lh-body {
+  font-family: var(--font-body);
+  font-size: 0.9rem;
+  color: var(--color-dark-gray);
+  line-height: 1.8;
+}
+
+.letterhead-mock .lh-body .lh-date {
+  margin-bottom: 2rem;
+  color: var(--color-mid-gray);
+  font-size: 0.85rem;
+}
+
+.letterhead-mock .lh-body .lh-recipient {
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.letterhead-mock .lh-body .lh-subject {
+  font-weight: 600;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+}
+
+.letterhead-mock .lh-body p {
+  margin-bottom: 1rem;
+}
+
+.letterhead-mock .lh-motto {
+  position: absolute;
+  bottom: 6.5rem;
+  left: 3rem;
+  right: 3rem;
+  font-family: var(--font-heading);
+  font-size: 0.65rem;
+  font-style: italic;
+  color: var(--color-accent);
+  letter-spacing: 0.02em;
+}
+
+.chambers-badge {
+  height: 48px;
+  width: auto;
+  opacity: 0.7;
+}
+
+.lh-chambers {
+  display: flex;
+  align-items: center;
+}
+
+.letterhead-mock .lh-footer {
+  position: absolute;
+  bottom: 2rem;
+  left: 3rem;
+  right: 3rem;
+  border-top: var(--border-accent);
+  padding-top: 1rem;
+  font-family: var(--font-body);
+  font-size: 0.65rem;
+  color: var(--color-mid-gray);
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.letterhead-mock .lh-footer div {
+  line-height: 1.6;
+}
+
+/* === Email Signature === */
+.email-sig-container {
+  background: #fff;
+  padding: 2rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  max-width: 600px;
+}
+
+.email-sig {
+  font-family: Arial, Helvetica, sans-serif; /* Email-safe */
+  font-size: 13px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.sig-logo-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.sig-icon {
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.sig-logo-row .sig-firm {
+  margin-bottom: 0;
+}
+
+.sig-logo-row .sig-firm-sub {
+  margin-bottom: 0;
+}
+
+.email-sig .sig-divider {
+  width: 50px;
+  height: 2px;
+  margin-bottom: 12px;
+}
+
+.email-sig .sig-name {
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 2px;
+}
+
+.email-sig .sig-title {
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 10px;
+}
+
+.email-sig .sig-firm {
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: var(--logo-text-transform, uppercase);
+  margin-bottom: 2px;
+}
+
+.email-sig .sig-firm-sub {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  margin-bottom: 12px;
+}
+
+.email-sig .sig-details {
+  font-size: 11px;
+  line-height: 1.7;
+}
+
+.sig-chambers {
+  margin: 10px 0;
+}
+
+.chambers-badge-sig {
+  height: 56px;
+  width: auto;
+  opacity: 0.8;
+}
+
+.email-sig .sig-legal {
+  margin-top: 12px;
+  font-size: 9px;
+  line-height: 1.5;
+}
+
+/* === Court Filing Mock === */
+.cf-pages {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.cf-page-label {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-mid-gray);
+  margin-top: 2rem;
+}
+
+.cf-page-label:first-child {
+  margin-top: 0;
+}
+
+.court-filing-mock {
+  background: #fff;
+  width: 100%;
+  max-width: 680px;
+  min-height: 700px;
+  padding: 2.5rem;
+  box-shadow: var(--shadow-md);
+  border-radius: var(--radius-md);
+  margin: 0 auto;
+  font-family: var(--font-body);
+  font-size: 0.82rem;
+  color: #333;
+  line-height: 1.7;
+  position: relative;
+}
+
+.cf-page-number {
+  position: absolute;
+  bottom: 1.5rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  color: var(--color-mid-gray);
+}
+
+.cf-continuation-header {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.7rem;
+  color: var(--color-mid-gray);
+  padding-bottom: 0.75rem;
+  margin-bottom: 1.5rem;
+  border-bottom: var(--border-accent);
+}
+
+/* Header table: court ↔ attorney */
+.cf-header-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+}
+
+.cf-header-table td {
+  vertical-align: top;
+  padding: 0.25rem 0;
+}
+
+.cf-court-cell {
+  width: 50%;
+}
+
+.cf-attorney-cell {
+  text-align: right;
+}
+
+.cf-attorney-logo {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.cf-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+}
+
+.court-filing-mock .cf-firm {
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--wordmark-color, var(--color-primary));
+  letter-spacing: calc(var(--logo-letter-spacing) * 0.6);
+  text-transform: var(--logo-text-transform, uppercase);
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.court-filing-mock .cf-firm-detail {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  color: var(--color-mid-gray);
+  margin-bottom: 0.25rem;
+}
+
+.cf-small {
+  font-size: 0.7rem;
+  color: var(--color-mid-gray);
+  line-height: 1.5;
+}
+
+.cf-date-cell {
+  padding-top: 1rem !important;
+  font-size: 0.8rem;
+  color: var(--color-dark-gray);
+  border-top: var(--border-accent);
+}
+
+/* Case info table */
+.cf-case-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  font-size: 0.8rem;
+  line-height: 1.6;
+  border: 1px solid var(--color-light-gray);
+}
+
+.cf-case-table td {
+  padding: 0.4rem 0.75rem;
+  vertical-align: top;
+}
+
+.cf-case-table .cf-label {
+  width: 140px;
+  color: var(--color-mid-gray);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Filing title */
+.cf-filing-title {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin: 2rem 0 1rem;
+  padding-bottom: 1rem;
+  border-bottom: var(--border-accent);
+}
+
+.cf-filing-copies {
+  font-family: var(--font-body);
+  font-size: 0.7rem;
+  font-weight: 400;
+  color: var(--color-mid-gray);
+  text-transform: none;
+  letter-spacing: 0;
+  display: block;
+  margin-top: 0.75rem;
+  line-height: 1.6;
+}
+
+/* Body hierarchy */
+.cf-body {
+  margin-top: 1.5rem;
+}
+
+.cf-h1 {
+  font-family: var(--font-heading);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 1.5rem 0 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cf-h3 {
+  font-family: var(--font-heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 1rem 0 0.5rem;
+  font-style: italic;
+}
+
+.cf-l1 {
+  margin-bottom: 0.75rem;
+  text-align: justify;
+}
+
+.cf-l2 {
+  margin-bottom: 0.75rem;
+  margin-left: 1.5rem;
+  text-align: justify;
+}
+
+.cf-l3 {
+  margin-bottom: 0.5rem;
+  margin-left: 3rem;
+  text-align: justify;
+}
+
+/* Evidence */
+.cf-evidence-title {
+  font-weight: 700;
+  font-size: 0.8rem;
+  margin-top: 1rem;
+  margin-bottom: 0.25rem;
+  text-indent: 1.5rem;
+}
+
+.cf-evidence-item {
+  font-size: 0.78rem;
+  padding: 0.2rem 0 0.2rem 2.5rem;
+  color: var(--color-dark-gray);
+}
+
+/* Signature */
+.cf-signature {
+  margin-top: 2.5rem;
+  font-size: 0.85rem;
+  text-align: right;
+}
+
+/* Cost table */
+.cf-costs-title {
+  font-family: var(--font-heading);
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: var(--color-primary);
+  margin-top: 2.5rem;
+  margin-bottom: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.cf-costs-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.75rem;
+  line-height: 1.5;
+}
+
+.cf-costs-table th {
+  text-align: left;
+  font-weight: 600;
+  color: var(--color-mid-gray);
+  border-bottom: 1px solid var(--color-mid-gray);
+  padding: 0.3rem 0.5rem;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.cf-costs-table th:last-child,
+.cf-costs-table td:last-child {
+  text-align: right;
+}
+
+.cf-costs-table td {
+  padding: 0.3rem 0.5rem;
+  border-bottom: 1px solid var(--color-light-gray);
+}
+
+.cf-costs-total td {
+  font-weight: 700;
+  border-top: 2px solid var(--color-primary);
+  border-bottom: 2px solid var(--color-primary);
+  color: var(--color-primary);
+}
+
+/* === Stamp / Žig === */
+.stamp-container {
+  display: flex;
+  gap: 3rem;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.stamp-card {
+  background: #fff;
+  padding: 2.5rem;
+  border-radius: var(--radius-md);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.stamp-group-title {
+  font-family: var(--font-heading);
+  font-size: 1rem;
+  color: var(--color-primary);
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+
+.stamp-group-title:first-of-type {
+  margin-top: 0;
+}
+
+.stamp-card .type-label {
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  color: var(--color-mid-gray);
+  font-family: var(--font-body);
+}
+
+.stamp-round .stamp-svg {
+  width: 300px;
+  height: 300px;
+}
+
+.stamp-rect .stamp-svg {
+  width: 380px;
+  height: auto;
+}
+
+/* === Utility === */
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .grid-2 {
+    grid-template-columns: 1fr;
+  }
+  .card-container {
+    justify-content: center;
+  }
+  .letterhead-mock {
+    min-height: auto;
+  }
+  .letterhead-mock .lh-footer {
+    position: static;
+    margin-top: 3rem;
+  }
+}
+
+/* ============================================
+   DARK MODE
+   ============================================ */
+[data-mode="dark"] body {
+  background: #111;
+  color: #ddd;
+}
+
+[data-mode="dark"] .section-title {
+  color: var(--color-accent);
+}
+
+[data-mode="dark"] .section-subtitle {
+  color: #888;
+}
+
+/* Typography specimens & cards */
+[data-mode="dark"] .type-specimen {
+  background: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-mode="dark"] .type-specimen .type-label {
+  color: #666;
+}
+
+[data-mode="dark"] .type-specimen .type-sample-body {
+  color: #bbb;
+}
+
+[data-mode="dark"] .type-specimen .type-meta {
+  color: #666;
+}
+
+/* Color swatches */
+[data-mode="dark"] .color-swatch {
+  background: #1a1a1a;
+}
+
+[data-mode="dark"] .color-swatch .swatch-name {
+  color: #ddd;
+}
+
+[data-mode="dark"] .color-swatch .swatch-var {
+  color: #777;
+}
+
+/* Business cards */
+[data-mode="dark"] .business-card.front {
+  background: #1a1a1a;
+  border-color: #333;
+}
+
+[data-mode="dark"] .business-card.front .card-type {
+  color: #777;
+}
+
+/* Letterhead — ostane bel (papir) */
+
+/* Court filing — ostane bel (papir) */
+
+/* Stamps */
+[data-mode="dark"] .stamp-card {
+  background: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-mode="dark"] .stamp-group-title {
+  color: var(--color-accent);
+}
+
+/* Email sig */
+[data-mode="dark"] .email-sig-container {
+  background: #1a1a1a;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.3);
+}
+
+[data-mode="dark"] .email-sig {
+  color: #ccc;
+}
+
+[data-mode="dark"] .email-sig .sig-details {
+  color: #999 !important;
+}
+
+[data-mode="dark"] .email-sig .sig-legal {
+  color: #666 !important;
+}
+
+/* Logo variants — adjust text-only specimens */
+[data-mode="dark"] .type-specimen .type-sample-display {
+  color: var(--color-accent);
+}
+
+[data-mode="dark"] .type-specimen .type-sample-heading {
+  color: var(--color-accent);
+}
+
+/* Page label */
+[data-mode="dark"] .cf-page-label {
+  color: #666;
+}
