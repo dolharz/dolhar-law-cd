@@ -92,18 +92,34 @@ document.addEventListener('DOMContentLoaded', () => {
   updateStampFirm();
 
   // Update color swatch HEX/RGB values
-  function rgbToHex(r, g, b) {
-    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('').toUpperCase();
+  function hexToRgb(hex) {
+    const n = parseInt(hex.slice(1), 16);
+    return [(n >> 16) & 255, (n >> 8) & 255, n & 255];
   }
 
   function updateSwatchHex() {
+    const styles = getComputedStyle(root);
     document.querySelectorAll('.swatch-hex').forEach(el => {
-      const swatchColor = el.closest('.color-swatch').querySelector('.swatch-color');
-      const bg = getComputedStyle(swatchColor).backgroundColor;
-      const m = bg.match(/(\d+)/g);
-      if (m && m.length >= 3) {
-        const [r, g, b] = m.map(Number);
-        const hex = rgbToHex(r, g, b);
+      const varName = el.dataset.var;
+      const raw = styles.getPropertyValue(varName).trim();
+      if (!raw) return;
+      // Handle hex values
+      const hexMatch = raw.match(/^#([0-9a-fA-F]{3,8})$/);
+      if (hexMatch) {
+        let hex = raw.toUpperCase();
+        // Expand 3-digit hex
+        if (hexMatch[1].length === 3) {
+          hex = '#' + hexMatch[1].split('').map(c => c + c).join('').toUpperCase();
+        }
+        const [r, g, b] = hexToRgb(hex);
+        el.textContent = hex + '  ·  RGB(' + r + ', ' + g + ', ' + b + ')';
+        return;
+      }
+      // Handle rgb() values
+      const rgbMatch = raw.match(/(\d+)/g);
+      if (rgbMatch && rgbMatch.length >= 3) {
+        const [r, g, b] = rgbMatch.map(Number);
+        const hex = '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('').toUpperCase();
         el.textContent = hex + '  ·  RGB(' + r + ', ' + g + ', ' + b + ')';
       }
     });
