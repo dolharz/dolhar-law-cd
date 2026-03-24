@@ -91,6 +91,30 @@ document.addEventListener('DOMContentLoaded', () => {
   });
   updateStampFirm();
 
+  // Update color swatch HEX/RGB values
+  function rgbToHex(r, g, b) {
+    return '#' + [r, g, b].map(x => x.toString(16).padStart(2, '0')).join('').toUpperCase();
+  }
+
+  function updateSwatchHex() {
+    document.querySelectorAll('.swatch-hex').forEach(el => {
+      const varName = el.dataset.var;
+      const raw = getComputedStyle(root).getPropertyValue(varName).trim();
+      const ctx = document.createElement('canvas').getContext('2d');
+      ctx.fillStyle = raw;
+      ctx.fillRect(0, 0, 1, 1);
+      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
+      const hex = rgbToHex(r, g, b);
+      el.textContent = hex + '  ·  RGB ' + r + ', ' + g + ', ' + b;
+    });
+  }
+
+  updateSwatchHex();
+  // Re-run on any toggle that changes theme
+  document.querySelectorAll('.theme-btn, .teal-btn, .mode-btn').forEach(btn => {
+    btn.addEventListener('click', () => requestAnimationFrame(updateSwatchHex));
+  });
+
   // Push content below fixed nav
   const nav = document.querySelector('.theme-switcher');
   function syncNavHeight() {

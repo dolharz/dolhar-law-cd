@@ -454,6 +454,13 @@ section {
   font-family: monospace;
 }
 
+.color-swatch .swatch-hex {
+  font-size: 0.75rem;
+  color: #666;
+  font-family: monospace;
+  margin-top: 2px;
+}
+
 /* === Typography === */
 .type-specimen {
   background: #fff;
@@ -1240,6 +1247,10 @@ section {
 
 [data-mode="dark"] .color-swatch .swatch-var {
   color: #777;
+}
+
+[data-mode="dark"] .color-swatch .swatch-hex {
+  color: #999;
 }
 
 /* Business cards */
