@@ -98,22 +98,21 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function updateSwatchHex() {
     document.querySelectorAll('.swatch-hex').forEach(el => {
-      const varName = el.dataset.var;
-      const raw = getComputedStyle(root).getPropertyValue(varName).trim();
-      const ctx = document.createElement('canvas').getContext('2d');
-      ctx.fillStyle = raw;
-      ctx.fillRect(0, 0, 1, 1);
-      const [r, g, b] = ctx.getImageData(0, 0, 1, 1).data;
-      const hex = rgbToHex(r, g, b);
-      el.textContent = hex + '  ·  RGB ' + r + ', ' + g + ', ' + b;
+      const swatchColor = el.closest('.color-swatch').querySelector('.swatch-color');
+      const bg = getComputedStyle(swatchColor).backgroundColor;
+      const m = bg.match(/(\d+)/g);
+      if (m && m.length >= 3) {
+        const [r, g, b] = m.map(Number);
+        const hex = rgbToHex(r, g, b);
+        el.textContent = hex + '  ·  RGB(' + r + ', ' + g + ', ' + b + ')';
+      }
     });
   }
 
   updateSwatchHex();
-  // Re-run on any toggle that changes theme
-  document.querySelectorAll('.theme-btn, .teal-btn, .mode-btn').forEach(btn => {
-    btn.addEventListener('click', () => requestAnimationFrame(updateSwatchHex));
-  });
+  // Re-run on any toggle that changes colors
+  new MutationObserver(() => requestAnimationFrame(updateSwatchHex))
+    .observe(root, { attributes: true, attributeFilter: ['data-theme', 'data-teal', 'data-mode'] });
 
   // Push content below fixed nav
   const nav = document.querySelector('.theme-switcher');
