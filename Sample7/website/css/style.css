@@ -1388,9 +1388,46 @@ section {
   max-width: 600px;
 }
 
+.wr-hero-logo {
+  margin-bottom: 1rem;
+}
+
+.wr-hero-logo .wordmark {
+  font-size: var(--text-4xl);
+}
+
+.wr-hero-logo .logo-icon {
+  width: calc(var(--text-4xl) * 1.6);
+  height: calc(var(--text-4xl) * 1.6);
+}
+
+.wr-nav-logo .logo-icon {
+  width: 32px;
+  height: 32px;
+}
+
+.wr-nav-logo .wordmark {
+  font-size: 1.1rem;
+}
+
+.wr-footer .logo-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.wr-footer .wordmark {
+  font-size: 0.95rem;
+}
+
 .wr-hero-badge {
   flex-shrink: 0;
   padding-top: 0.5rem;
+}
+
+.wr-hero-badge img {
+  background: #fff;
+  border-radius: 4px;
+  padding: 8px;
 }
 
 /* Sections */
